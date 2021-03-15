@@ -5,7 +5,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link type="text/css" href="assets/css/styles.css" rel="stylesheet"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
 	</head>
 	<body class="is-preload">
 
@@ -25,15 +28,31 @@
 		<!-- One -->
 			<section id="one" class="main style1">
 				<div class="container">
-					<div class="row gtr-150">
+					<div class="row gtr-300">
 						<div class="col-6 col-12-medium">
 							<header class="major">
 								<h2>WebAR Example - Corona 3D</h2>
 							</header>
 							<p>View 3D models in real time right in your webbrowser without the need for any apps or plugins. If you have an ARKit or ARCore compatible mobile device you can even place it anywhere in your room.</p>
 						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+						<div class="col-6 col-12-medium">
+							<!-- <model-viewer> HTML element -->
+    <model-viewer src="assets/3d/marbet_corona.glb" camera-controls ios-src="assets/3d/marbet_corona.usdz" ar ar-modes="scene-viewer webxr quick-look" environment-image="assets/3d/aircraft_workshop_01_1k.hdr" camera-orbit="-24.53deg 86.83deg 1.139m" poster="assets/3d/poster.png" min-camera-orbit="auto auto auto" max-camera-orbit="auto auto 1.139m">
+<!-- 		<button class="Hotspot" slot="hotspot-1" data-position="-0.16174588825840155m 0.7497533897413153m -0.04802336698594624m" data-normal="0.8577175989927356m -0.3758454638272254m 0.3508000964917695m" data-visibility-attribute="visible">
+			<div class="HotspotAnnotation">Corona Envelope</div> -->
+		</button>
+		<div class="progress-bar hide" slot="progress-bar">
+			<div class="update-bar"></div>
+		</div>
+		<button slot="ar-button" id="ar-button">
+			View in your space
+		</button>
+		<div id="ar-prompt">
+			<img src="assets/3d/ar_hand_prompt.png">
+		</div>
+	  </model-viewer>  
+	  <script src="assets/js/script.js"></script>
+	  <!-- Loads <model-viewer> for browsers: -->
 						</div>
 					</div>
 				</div>
@@ -442,6 +461,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; marbet - Marion und Bettina Würth GmbH & Co. KG</li>
+					<li><a href="https://www.marbet.com/datenschutz/">Datenschutz</a></li>
+					<li><a href="https://www.marbet.com/impressum/">Impressum</a></li>
 				</ul>
 			</section>
 
@@ -452,6 +473,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 	</body>
 </html>
