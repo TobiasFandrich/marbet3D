@@ -102,6 +102,8 @@ model-viewer[ar-status="session-started"] > #ar-prompt {
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
+
+
 .modal-window {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.25);
@@ -174,7 +176,8 @@ a {
 }
 
 .container {
-  display: grid;
+  display: flex;
+  position: sticky;
   justify-content: center;
   align-items: center;
   height: 70px;
@@ -197,6 +200,7 @@ small {
   padding: 1em 1.5em;
   border-radius: 1rem;
   text-decoration: none;
+  align-self: flex-end;
 }
 .btn i {
   padding-right: 0.3em;
