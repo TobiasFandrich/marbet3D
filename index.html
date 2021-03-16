@@ -14,6 +14,20 @@
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
   </head>
   <body>
+    <div class="container">
+      <div class="interior">
+        <a class="btn" href="#open-modal">View in AR</a>
+      </div>
+    </div>
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <h1>View in AR</h1>
+        <div>To view this in AR please scan the QR Code with your ARKit or ARCore compatible mobile device.</div>
+        <img src="qrcode.jpeg">
+        </div>
+    </div>
+
     <!-- <model-viewer> HTML element -->
     <model-viewer src="marbet_corona.glb" camera-controls ar ios-src="marbet_corona.usdz" environment-image="aircraft_workshop_01_1k.hdr" auto-rotate ar-modes="scene-viewer webxr scene-viewer quick-look" shadow-intensity="1.6" camera-orbit="190.1deg 78.7deg 1.139m" poster="poster.png">
       <div class="progress-bar hide" slot="progress-bar">
@@ -25,7 +39,8 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-    </model-viewer>  
+    </model-viewer>
+    
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
